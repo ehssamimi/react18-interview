@@ -1,8 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Define font-face in App.css or a separate stylesheet */
+@font-face {
+  font-family: 'vazir';
+  src: local('vazir'),
+  url('/font/vazir.woff2') format('woff'),
+  url('/font/Vazirmatn-Regular.woff2') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: vazir,Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 

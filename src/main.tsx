@@ -1,7 +1,7 @@
 // import React from 'react'
 import ReactDOM from 'react-dom/client'
  import './index.css'
-import React from "react";
+// import React from "react";
 import {Provider} from "react-redux";
 import {store} from "./store/store.ts";
 import Pages from "./pages/pages.tsx";
@@ -19,11 +19,12 @@ import {
     RouterProvider,
 } from "react-router-dom";
 import Sudoku from "./pages/Sudoku/Sudoku.tsx";
+import ReactFormHook from "./pages/ReactFormHook";
 function ErrorBoundary() {
     // let error = useRouteError();
     // console.error(error);
     // Uncaught ReferenceError: path is not defined
-    return <div>Dang!</div>;
+    return <div className=' w-[100vw] flex justify-center items-center text-amber-800'>Dang! THIS IS ERROR</div>;
 }
 
 
@@ -60,10 +61,19 @@ const router = createBrowserRouter([
     },
     {
         path: "interview",
-        // errorElement:<ErrorBoundary />,
+        errorElement:<ErrorBoundary />,
         element: (
 
             <Interview />
+
+        ),
+    },
+    {
+        path: "react-form-hook",
+        // errorElement:<ErrorBoundary />,
+        element: (
+
+            <ReactFormHook />
 
         ),
     },
